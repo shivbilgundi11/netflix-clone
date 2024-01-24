@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Net-Sans-Rg";
+    src: url(./assets/fonts/NetflixSans_W_Rg.woff2);
+}
+
+@font-face {
+    font-family: "Net-Sans-Md";
+    src: url(./assets/fonts/NetflixSans_W_Md.woff2);
+}
+
+@font-face {
+    font-family: "Net-Sans-Bold";
+    src: url(./assets/fonts/NetflixSans_W_Blk.woff2);
+}
+
+@font-face {
+    font-family: "CircularXXWeb";
+    src: url(./assets/fonts/CircularXXWeb-Book.woff2);
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #232323;
+    color: #fff;
+    font-family: "Net-Sans-Rg";
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(83, 82, 82);
+    border-radius: 10px;
+}
+
+.bg-gradient {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.9) 100%), url(./assets/images/poster-collage.jpg);
+}
+
+.bg-gradient2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.9) 100%), url(./assets/images/posters-bg-signin.jpg);
+}
+
+
+
+.email-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bg-transp {
+    background: #00000067;
+}
+
+@layer components {
+    .max-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .gradient-bg {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 20%);
+    }
+
+    .container {
+        max-width: 1172px;
+        margin: 0 auto;
+    }
+
+    .input-email {
+        @apply text-white px-5 py-3 sm:py-3.5 sm:px-4 border border-dark-gray rounded-md w-[80vw] mx-auto sm:w-[390px]
+    }
+
+    .btn-primary {
+        @apply px-4 py-2 font-medium font-netflixRg text-center bg-primary text-white rounded-md
+    }
+
+    .btn-secondary {
+        @apply bg-primary text-white flex items-center justify-between rounded py-3 px-3.5 sm:py-3.5 sm:px-5 text-lg sm:text-xl font-netflixMd
+    }
+
+    .form-input {
+        @apply w-full h-[50px] p-4 rounded-sm
+    }
+}
