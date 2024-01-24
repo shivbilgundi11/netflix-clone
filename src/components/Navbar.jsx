@@ -3,6 +3,8 @@ import NavbarItem from "./NavbarItem";
 import MobileMenu from "./MobileMenu";
 import { useCallback, useEffect, useState } from "react";
 import AccountMenu from "./AccountMenu";
+import Logo from '../assets/images/Netflix_Logo_PMS.png'
+import Avatar from '../assets/images/avatar.png'
 
 const TOP_OFFSET = 66;
 
@@ -41,11 +43,7 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img
-          src="/src/assets/images/Netflix_Logo_PMS.png"
-          alt="Log"
-          className="h-8 lg:h-12"
-        />
+        <img src={Logo} alt="Log" className="h-8 lg:h-12" />
 
         <div className="flex-row ml-4 gap-6 hidden lg:flex">
           <NavbarItem label="Home" />
@@ -84,7 +82,7 @@ const Navbar = () => {
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
               <img
-                src="/src/assets/images/avatar.png"
+                src={Avatar}
                 className="w-full"
                 alt="avatar"
               />
